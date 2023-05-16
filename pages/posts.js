@@ -1,12 +1,16 @@
+import Heading from "../components/Heading";
+import React from "react";
+
 const Posts = () => {
   return (
     <>
-      <div>POSTS LIST</div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+      <Heading text="POSTS LIST" />
+      <Heading
+        tag="p"
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
         corporis dolorem doloremque harum hic in, ipsum iste laudantium, minima
-        modi molestias sunt tenetur? Odit, quibusdam.
-      </p>
+        modi molestias sunt tenetur? Odit, quibusdam."
+      />
     </>
   );
 };

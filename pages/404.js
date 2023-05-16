@@ -1,8 +1,11 @@
+import Heading from "../components/Heading";
+import React from "react";
+
 const Error = () => {
   return (
     <>
-      <h1>ERROR 404</h1>
-      <h2>Увы, страница не найдена. . .</h2>
+      <Heading text="ERROR 404" />
+      <Heading tag="h2" text="Увы, страница не найдена." />
     </>
   );
 };
