@@ -15,12 +15,12 @@ const Navbar = () => {
   return (
     <nav className={s.nav}>
       <div className={s.logo}>
-        {/*<Image*/}
-        {/*  src="../ginaz_dev.png"*/}
-        {/*  alt="Picture of the author"*/}
-        {/*  width={50}*/}
-        {/*  height={50}*/}
-        {/*/>*/}
+        <Image
+          src="/gdev.png"
+          alt="Picture of the author"
+          width={100}
+          height={80}
+        />
       </div>
       <div className={s.links}>
         {navigation.map(({ id, title, path }) => (
