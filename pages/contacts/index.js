@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 
 import s from "../../styles/Card.module.scss";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -10,7 +11,7 @@ export const getStaticProps = async () => {
 
   if (!data) {
     return { notFound: true };
-  } //  случае ошибки вернется странится 404
+  } //  в случае ошибки вернется странится 404
   return { props: { contacts: data } };
 };
 
@@ -22,11 +23,17 @@ const Index = ({ contacts }) => {
       </Head>
       <Heading text="CONTACTS" />
       <div>
-        {contacts?.map(({ id, name, email }) => (
-          <div key={id} className={s.card}>
-            {name} | email: {email}
-          </div>
-        ))}
+        <ul>
+          {contacts?.map(({ id, name, email }) => (
+            <li key={id}>
+              <Link href={`contacts/${id}`}>
+                <div className={s.card}>
+                  {name} | email: {email}
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

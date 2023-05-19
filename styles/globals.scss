@@ -20,6 +20,10 @@ main {
   padding: 20px;
 }
 
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+
 header {
   min-height: 80px;
 }
