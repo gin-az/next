@@ -1,6 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import Heading from "./Heading";
 import s from "../styles/Card.module.scss";
+import { IContact } from "../types";
 
 const ContactInfo = ({ contact }) => {
   const { name, email, address } = contact || {};
