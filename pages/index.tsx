@@ -3,11 +3,12 @@ import Head from "next/head";
 import Socials from "../components/Socials";
 
 import s from "../styles/Home.module.scss";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import React, { FC } from "react";
+import { GetStaticProps } from "next";
+import { SocialsProps } from "../types";
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch(`http://localhost:3000/api/socials/`);
-  // const response = await fetch(`${process.env.API_HOST}/socials/`);
   const data = await response.json();
 
   if (!data) {
@@ -21,7 +22,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home = ({ socials }) => (
+const Home: FC<SocialsProps> = ({ socials }) => (
   <>
     <Head>
       <title>Home</title>

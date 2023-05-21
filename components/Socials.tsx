@@ -1,7 +1,9 @@
 import Head from "next/head";
+import React, { FC } from "react";
 import styles from "../styles/Socials.module.scss";
+import { SocialsProps } from "../types";
 
-const Socials = ({ socials }) => {
+const Socials: FC<SocialsProps> = ({ socials }) => {
   if (!socials) {
     return null;
   }

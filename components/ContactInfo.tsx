@@ -3,7 +3,11 @@ import Heading from "./Heading";
 import s from "../styles/Card.module.scss";
 import { IContact } from "../types";
 
-const ContactInfo = ({ contact }) => {
+type contactProps = {
+  contact: IContact;
+};
+
+const ContactInfo: FC<contactProps> = ({ contact }) => {
   const { name, email, address } = contact || {};
   const { street, suite, city, zipcode } = address || {};
   return (

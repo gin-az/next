@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import Heading from "./Heading";
 
-const Footer = () => (
+const Footer: FC = () => (
   <footer>
     <Heading tag="h4" text="© - Created by GinAz" />
   </footer>

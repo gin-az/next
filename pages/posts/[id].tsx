@@ -1,10 +1,11 @@
 import React from "react";
 import { PostInfo } from "../../components/PostInfo";
 import Head from "next/head";
+import { GetStaticPaths } from "next";
 
 // Генерация статичных страниц.  SSG
 // yarn build создадутся статичные страницы для каждого id
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const data = await response.json();
 
